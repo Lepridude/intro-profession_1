@@ -5,29 +5,44 @@
 
 ## О проекте
 
-Небольшой Python-проект для получения информации о фильмах через OMDb API. Пример показывает работу с HTTP-запросом, JSON-ответом и переменными окружения.
+Небольшой Python-проект для получения информации о фильмах через OMDb API. В нём показаны HTTP-запросы, обработка JSON и работа с переменными окружения.
 
-## Файлы
-
-- `rest_api_demo.ipynb` — основной ноутбук с запросом к OMDb API и выводом информации о фильме.
-- `reflection1.md` — рефлексия по занятию.
-- `INSTRUCTION.md` — описание этапов работы и команд Git.
-- `.gitignore` — исключает виртуальное окружение и файл с секретным ключом.
-
-## Запуск
+## Клонирование
 
 ```bash
+git clone https://github.com/Lepridude/intro-profession_1.git
+cd intro-profession_1
 python -m venv .venv
-# macOS / Linux
-source .venv/bin/activate
-# Windows PowerShell: .venv\\Scripts\\Activate.ps1
-python -m pip install requests python-dotenv ipykernel
 ```
 
-Для версии из ветки `env-feature` создайте `.env` в корне проекта:
+Активируйте окружение и установите зависимости:
+
+```bash
+# macOS / Linux
+source .venv/bin/activate
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+```
+
+## Структура проекта
+
+- `rest_api_demo.ipynb` — ноутбук с запросом к OMDb API.
+- `reflection1.md` — рефлексия по занятию.
+- `INSTRUCTION.md` — описание этапов работы с Git и GitHub.
+- `requirements.txt` — зависимости Python.
+- `.env.example` — пример файла для API-ключа.
+
+## Ветки
+
+- `master` — основная версия и результат слияния Pull Request.
+- `movie-output-feature` — вывод актёров и краткой итоговой строки.
+- `env-feature` — загрузка ключа из `.env` и обработка ошибок API.
+
+Для работы с `env-feature` скопируйте `.env.example` в `.env` и укажите свой ключ OMDb:
 
 ```env
 OMDB_API_KEY=ваш_ключ_OMDb
 ```
 
-Не добавляйте `.env` в Git и не сохраняйте API-ключ в выводах Jupyter.
+Файл `.env` уже добавлен в `.gitignore`. Не публикуйте его и не сохраняйте ключ в выводах Jupyter.
