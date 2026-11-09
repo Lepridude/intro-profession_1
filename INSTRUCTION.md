@@ -20,7 +20,7 @@ cd intro-profession_1
 python -m venv .venv
 # macOS / Linux
 source .venv/bin/activate
-# Windows PowerShell: .venv\\Scripts\\Activate.ps1
+# Windows PowerShell: .venv\Scripts\Activate.ps1
 python -m pip install requests python-dotenv ipykernel
 ```
 
